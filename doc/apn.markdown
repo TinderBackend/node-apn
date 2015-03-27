@@ -192,7 +192,7 @@ As of version 1.2.0 it is possible to use a set of methods provided by Notificat
 
 For iOS 7 applications which support Silent Remote Notifications you can use the `note.contentAvailable` property. This is identical in functionality to  `note.newsstandAvailable` without the confusion of the "Newstand" terminology.
 
-A `Notification` enapsulates the data to be compiled down to JSON and pushed to a device. See the [payload documentation][pl] for more details. At present the total length of the payload accepted by Apple is 256 bytes.
+A `Notification` enapsulates the data to be compiled down to JSON and pushed to a device. See the [payload documentation][pl] for more details. At present the total length of the payload accepted by Apple is 2048 bytes.
 
 ### notification.retryLimit
 
@@ -200,7 +200,7 @@ The maximum number of retries which should be performed when sending a notificat
 
 ### notification.expiry
 
-The UNIX timestamp representing when the notification should expire. This does not contribute to the 256 byte payload size limit. An expiry of 0 indicates that the notification expires immediately.
+The UNIX timestamp representing when the notification should expire. This does not contribute to the 2048 byte payload size limit. An expiry of 0 indicates that the notification expires immediately.
 
 ### notification.priority
 
@@ -284,7 +284,7 @@ Set the `url-args` property of the `aps` object.
 
 ### notification.trim()
 
-Attempt to automatically trim the notification alert text body to meet the payload size limit of 256 bytes.
+Attempt to automatically trim the notification alert text body to meet the payload size limit of 2048 bytes.
 
 
 ## Class: apn.Feedback
